@@ -58,5 +58,93 @@ CPP Module 09 is designed to test container selection and algorithm efficiency i
 
 ### Clone the repository
 ```bash
-git clone [https://github.com/rcdiana16/CPP09.git](https://github.com/rcdiana16/CPP09.git)
+git clone https://github.com/rcdiana16/CPP09
 cd CPP09
+
+### Clone the repository
+Each exercise contains its own Makefile. Navigate to the respective directory and build:
+
+Bash
+# Build Exercise 00
+cd ex00 && make
+
+# Build Exercise 01
+cd ../ex01 && make
+
+# Build Exercise 02
+cd ../ex02 && make
+Test Suite & Examples
+Exercise 00: Bitcoin Exchange (btc)
+Database Format (data.csv)
+Fragmento de código
+date,exchange_rate
+2011-01-03,0.3
+2011-01-04,0.3
+2012-01-11,7.1
+Input File (input.txt)
+Plaintext
+date | value
+2011-01-03 | 3
+2011-01-03 | 2
+2011-01-09 | 1
+2012-01-11 | -1
+2001-42-42 | 10000
+Test Execution & Expected Output
+Bash
+$ ./btc input.txt
+2011-01-03 => 3 = 0.9
+2011-01-03 => 2 = 0.6
+2011-01-09 => 1 = 0.3
+Error: not a positive number.
+Error: bad input => 2001-42-42
+Exercise 01: Reverse Polish Notation (RPN)
+Valid Calculations
+Bash
+$ ./RPN "8 9 * 9 - 9 - 9 - 4 - 1 +"
+42
+
+$ ./RPN "7 7 * 7 -"
+42
+
+$ ./RPN "1 2 + 3 4 + *"
+21
+Edge Cases & Error Handling
+Bash
+# Error: Division by zero
+$ ./RPN "5 0 /"
+Error
+
+# Error: Invalid token
+$ ./RPN "1 2 + a"
+Error
+
+# Error: Insufficient operands
+$ ./RPN "1 +"
+Error
+Exercise 02: PmergeMe (PmergeMe)
+Sorting Test
+Bash
+$ ./PmergeMe 3 5 9 7 4
+Before: 3 5 9 7 4
+After:  3 4 5 7 9
+Time to process a range of 5 elements with std::vector : 0.00031 us
+Time to process a range of 5 elements with std::deque  : 0.00048 us
+Large Dataset Benchmark Test
+Bash
+# Generate 3000 random integers and run PmergeMe
+$./PmergeMe$(shuf -i 1-100000 -n 3000 | tr '\n' ' ')
+Before: 421 8901 12 9481 ...
+After:  12 421 8901 9481 ...
+Time to process a range of 3000 elements with std::vector : 1.24012 us
+Time to process a range of 3000 elements with std::deque  : 2.10841 us
+Error Handling Tests
+Bash
+# Error: Negative numbers
+$ ./PmergeMe "-5" "3" "9"
+Error
+
+# Error: Non-numeric arguments
+$ ./PmergeMe "3" "five" "9"
+Error
+Author
+rcdiana16 - GitHub Profile
