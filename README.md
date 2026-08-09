@@ -13,7 +13,6 @@ A C++ Module focused on mastering C++ Standard Template Library (STL) containers
   - [Exercise 01: Reverse Polish Notation](#exercise-01-reverse-polish-notation)
   - [Exercise 02: PmergeMe](#exercise-02-pmergeme)
 - [Installation & Compilation](#installation--compilation)
-- [Test Suite & Examples](#test-suite--examples)
 
 ---
 
