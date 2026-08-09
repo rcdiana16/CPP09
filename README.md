@@ -14,7 +14,6 @@ A C++ Module focused on mastering C++ Standard Template Library (STL) containers
   - [Exercise 02: PmergeMe](#exercise-02-pmergeme)
 - [Installation & Compilation](#installation--compilation)
 - [Test Suite & Examples](#test-suite--examples)
-- [Author](#author)
 
 ---
 
@@ -146,5 +145,4 @@ Error
 # Error: Non-numeric arguments
 $ ./PmergeMe "3" "five" "9"
 Error
-Author
-rcdiana16 - GitHub Profile
+
