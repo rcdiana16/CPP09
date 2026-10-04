@@ -71,6 +71,7 @@ cd ../ex01 && make
 
 # Build Exercise 02
 cd ../ex02 && make
+
 Test Suite & Examples
 Exercise 00: Bitcoin Exchange (btc)
 Database Format (data.csv)
@@ -87,6 +88,7 @@ date | value
 2011-01-09 | 1
 2012-01-11 | -1
 2001-42-42 | 10000
+
 Test Execution & Expected Output
 Bash
 $ ./btc input.txt
@@ -95,6 +97,8 @@ $ ./btc input.txt
 2011-01-09 => 1 = 0.3
 Error: not a positive number.
 Error: bad input => 2001-42-42
+
+
 Exercise 01: Reverse Polish Notation (RPN)
 Valid Calculations
 Bash
@@ -106,6 +110,7 @@ $ ./RPN "7 7 * 7 -"
 
 $ ./RPN "1 2 + 3 4 + *"
 21
+
 Edge Cases & Error Handling
 Bash
 # Error: Division by zero
@@ -119,6 +124,8 @@ Error
 # Error: Insufficient operands
 $ ./RPN "1 +"
 Error
+
+
 Exercise 02: PmergeMe (PmergeMe)
 Sorting Test
 Bash
